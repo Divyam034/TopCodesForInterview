@@ -44,7 +44,7 @@ def is_prime(num):
 for i in range(len(tests)):
     print(is_prime(tests[i]['input']['num']) == tests[i]['output'])
 
-"""
+
 
 # Python program to find prime numbers between a given range
 # First of all we will create some test cases
@@ -97,3 +97,49 @@ def prime_in_range(start, end):
 
 for i in range(len(tests)):
     print(prime_in_range(tests[i]['input']["start"], tests[i]["input"]["end"]) == tests[i]['output'])
+
+
+
+# Python program to find sum of digits of a number
+# First of all we will create some test cases
+
+
+
+test1 ={
+    "input": {
+        "num": "12345"
+    },
+    "output": 15 
+}
+
+
+test3 ={
+    "input": {
+        "num": "112233"
+    },
+    "output": 12
+}
+
+tests = [test1, test3]
+
+def sumDigitsNumber1(num):              #using while loop
+    sum = 0
+    while int(num) > 0:
+        digit = int(num) % 10
+        sum += digit
+        num = int(int(num)/10)
+    return sum
+
+def sumDigitsNumber2(num):              #using string extraction
+    sum = 0
+    for i in num:
+        sum += int(i)
+    return sum
+
+for i in range(len(tests)):
+    print(sumDigitsNumber1(tests[i]['input']["num"]) == tests[i]['output'])
+
+for i in range(len(tests)):
+    print(sumDigitsNumber2(tests[i]['input']["num"]) == tests[i]['output'])
+
+"""
