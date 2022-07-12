@@ -8,6 +8,9 @@
 """
 
 def invertedPyramid(row):
-    # kn = row+1 + (row-1)*(-2)
     for i in range(row):
-        print("*"*)
+        print(" "*i, end="")
+        star = 2*(row-i)-1
+        print("*"*star)
+
+invertedPyramid(5)
