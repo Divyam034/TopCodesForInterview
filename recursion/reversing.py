@@ -3,11 +3,11 @@
 
 def recur_reverse(num):
     global reverse
-    if num > 0:
-        digit = num%10
-        reverse = reverse*10 + digit
-        return recur_reverse(num//10)
-    return reverse
+    if num==0:
+        return reverse
+    reverse = reverse*10 + num%10
+    num //=10
+    return recur_reverse(num)
 
 reverse = 0
 num = int(input("Enter a number: "))

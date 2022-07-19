@@ -1,11 +1,15 @@
 # length of string using python
 
-from operator import length_hint
+from itertools import count
 
 
 def length(str):
-    if str == "":
-        return 0
-    return 1+ length(str[1:])
-
-print(length("apple"))
+    global count
+    if str=="":
+        return count
+    count +=1
+    return length(str[1:])
+    
+count = 0
+str = input("Enter a string: ")
+print(length(str))

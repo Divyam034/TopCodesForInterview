@@ -8,7 +8,7 @@
 3
 
 
-"""
+
 
 def basicIncrementingTriangle(rows):
     k = 3
@@ -20,3 +20,18 @@ def basicIncrementingTriangle(rows):
 
 basicIncrementingTriangle(5)
 
+"""
+
+def is_armstrong(num):
+    temp = num
+    pow = len(str(num))
+    sum = 0
+    while temp>0:
+        digit = temp%10
+        sum += digit**pow
+        temp //=10
+    if sum == num:
+        return "is armstrong"
+    else:
+        return "not armstrong"
+print(is_armstrong(153))

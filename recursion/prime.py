@@ -1,11 +1,18 @@
 # prime number using recursion
 
-def is_prime(num, i =2):
-    if num == i:
+def isPrime(num):
+    global i
+    if num == 2:
         return True
-    elif num%i == 0:
+    if num < 2:
         return False
-    return is_prime(num, i+1)
-    
+    if i == num:
+        return True
+    if num % i == 0:
+        return False
+    i+=1
+    return isPrime(i)
 
-print(is_prime(7))
+i = 2
+num = int(input("Enter a number: "))
+print(isPrime(num))

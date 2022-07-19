@@ -1,14 +1,17 @@
 # python program to find maximum number of element in an array
 
-def find_max(arr, n):
-    if n == 1:
-        return arr[0]
-    return max(arr[n-1], find_max(arr, n-1))
 
-arr = [2,4,3,5,2]
+def maxInArr(arr):
+    if n == len:
+        return max
+    if arr[i] > max:
+        max = arr[i]
+    i+=1
+    return maxInArr(arr)
+
+# driver code
+i=0
+arr = [int(x) for x in input().split(" ")]
+max = arr[0]
 n = len(arr)
-print(find_max(arr, len(arr)))
-
-
-
-#max[2, max[5, max[3, max[4, max[2, 2]]]]]
+print("Minimum element in array is:",maxInArr(arr))
