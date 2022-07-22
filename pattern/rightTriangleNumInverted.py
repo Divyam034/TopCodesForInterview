@@ -13,7 +13,7 @@
 def rightTriangleNumberInverted(row):
     k = 1
     for i in range(1,row+1):
-        for j in range(i):
+        for j in range(row):
             k = i*(i+1)//2
             print(k-j,end="")
 

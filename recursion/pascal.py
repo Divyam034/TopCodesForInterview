@@ -15,3 +15,8 @@ def pascal(rows):
             print(res[i][j], end=" ")
         print()
 print(pascal(7))
+
+def pascal(row):
+
+
+i = 0
